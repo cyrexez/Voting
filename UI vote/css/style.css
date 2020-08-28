@@ -1,0 +1,96 @@
+/********* headers **************/
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.section-title h2 {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #68a4c4;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+/*********** buttons ************/
+input[type="submit"] {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 8px 20px;
+  transition: 0.5s;
+}
+input[type="submit"]:hover {
+  background: #68a4c4;
+  border: 1px solid #68a4c4;
+  color: white;
+}
+/****** login container *********/
+.login-container {
+  width: 90%;
+  margin: auto;
+}
+@media (min-width: 576px) {
+  .login-container {
+    width: 400px;
+    margin: auto;
+  }
+}
+
+/************ VOTE GRID  *********/
+.vote-grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  margin: 40px 0;
+}
+.vote-item {
+  border-radius: 5px;
+  width: 200px;
+  height: auto;
+}
+.vote-item:hover .vote-item-image {
+  filter: grayscale(100%);
+}
+.vote-item-image {
+  width: 200px;
+  height: 200px;
+}
+.vote-item-text {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: white;
+  padding-bottom: 20px;
+  text-align: center;
+}
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+}
